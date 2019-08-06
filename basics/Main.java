@@ -1,3 +1,4 @@
+import java.util.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -19,6 +20,8 @@ public class Main {
     clock();
   }
 
+  // pluralize
+  // accepts a word and a number and returns a string with the word pluralized with an “s” if the number is zero, or greater than one.
   public static String pluralize(String word, int count) {
     if (count == 0 || count > 1) {
       return word + "s";
@@ -27,6 +30,8 @@ public class Main {
     }
   }
 
+  // flipNHeads
+  // accepts an integer n and flips coins until n heads are flipped in a row. 
   public static String flipNHeads(int n) {
     int flips = 0;
     int headCount = 0;
@@ -47,10 +52,12 @@ public class Main {
     return "It took " + flips + " flips to flip " + headCount + " heads in a row.";
   }
 
+  // Clock - 1st implementation
+  // using Thread & Runnable
+  // constantly print out the current time to the console, second by second.
   public static void clock() {
     int timeInterval = 1000;
 
-    // This developers webpage helped me setup a simple thread
     // https://blog.ajduke.in/2014/03/31/java-how-to-schedule-a-task-to-run-in-an-interval/
     Runnable runnable = new Runnable() {
       public void run() {
@@ -71,5 +78,25 @@ public class Main {
 
     Thread thread = new Thread(runnable);
     thread.start();
+  }
+
+  // timerTaskClock - 2nd implementation
+  // using TimerTask & Timer
+  // constantly print out the current time to the console, second by second.
+  public static void timerTaskClock() {
+    int delay = 0;
+    int period = 1000;
+
+    TimerTask timerTask = new TimerTask() {
+      public void run() {
+        LocalDateTime now = LocalDateTime.now();
+        String time = now.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+
+        System.out.println(time);
+      }
+    };
+
+    Timer timer = new Timer("Timer");
+    timer.scheduleAtFixedRate(timerTask, delay, period);
   }
 }
