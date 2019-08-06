@@ -13,4 +13,8 @@ This repo holds the first 10 labs for Code 401
 - clock
 
 ## Resources
-[Threads](https://blog.ajduke.in/2014/03/31/java-how-to-schedule-a-task-to-run-in-an-interval/)
+[Threads - how to schedule a task to run in an interval](https://blog.ajduke.in/2014/03/31/java-how-to-schedule-a-task-to-run-in-an-interval/)
+
+[Java Timer and TimerTask](https://www.baeldung.com/java-timer-and-timertask)
+
+
