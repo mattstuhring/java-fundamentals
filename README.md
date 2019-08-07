@@ -2,6 +2,12 @@
 
 This repo holds the first 10 labs for Code 401
 
+## Table of Contents
+1. Java primitives and control flow
+2. Arrays, Loops, Imports, ArrayLists
+
+-----------------------------------------------------------------
+
 ## Lab 01: Java primitives and control flow
 
 ### File Structure
@@ -21,4 +27,29 @@ This repo holds the first 10 labs for Code 401
 
 - [Java Timer and TimerTask](https://www.baeldung.com/java-timer-and-timertask)
 
+-----------------------------------------------------------------
 
+## Lab 2: Arrays, Loops, Imports, ArrayLists
+
+### File Structure
+```
+- basiclibrary
+-- src
+--- main
+---- java
+----- basiclibrary
+------ RollingDice.java
+--- test
+---- java
+----- basiclibrary
+------ RollingDiceTest.java
+```
+
+### Methods
+- roll
+- containsDuplicates
+- calculateAverage
+- calculateAverageArrayOfArrays
+
+### Resources
+- Travis Cox
