@@ -34,18 +34,19 @@ public class RollingDiceTest {
     public void rollingDiceTest_calculateAverageSuccess() {
         int[] testArray = new int[]{1,2,3,4};
         double avg = 2.5;
-        assertEquals(avg, RollingDice.calculateAverage(testArray), 0.0);
+        assertEquals(avg, RollingDice.calculateAverage(testArray), 0.01);
     }
 
     @Test
     public void rollingDiceTest_calculateAverageFail() {
         int[] testArray = new int[]{1,2,3,4};
         double avg = 5.0;
-        assertNotEquals(avg, RollingDice.calculateAverage(testArray), 0.0);
+        assertNotEquals(avg, RollingDice.calculateAverage(testArray), 0.01);
     }
 
     @Test
-    public void rollingDiceTest_calculateAverageArrayOfArraysSuccess() {
+    public void rollingDiceTest_calculateLowestAverageArrayOfArraysSuccess() {
+        int[] expectedArray = new int[]{55, 54, 60, 53, 59, 57, 61};
         int[][] weeklyMonthTemperatures = {
             {66, 64, 58, 65, 71, 57, 60},
             {57, 65, 65, 70, 72, 65, 51},
@@ -53,18 +54,19 @@ public class RollingDiceTest {
             {65, 56, 55, 52, 55, 62, 57}
         };
 
-        assertEquals(60.25, RollingDice.calculateAverageArrayOfArrays(weeklyMonthTemperatures), 0.0);
+        assertArrayEquals(expectedArray, RollingDice.calculateAverageArrayOfArrays(weeklyMonthTemperatures));
     }
 
     @Test
-    public void rollingDiceTest_calculateAverageArrayOfArraysFail() {
+    public void rollingDiceTest_calculateLowestAverageArrayOfArraysDifferentOrder() {
+        int[] expectedArray = new int[]{55, 54, 60, 53, 59, 57, 61};
         int[][] weeklyMonthTemperatures = {
-            {66, 64, 58, 65, 71, 57, 60},
-            {57, 65, 65, 70, 72, 65, 51},
-            {55, 54, 60, 53, 59, 57, 61},
-            {65, 56, 55, 52, 55, 62, 57}
+                {55, 54, 60, 53, 59, 57, 61},
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {65, 56, 55, 52, 55, 62, 57}
         };
 
-        assertNotEquals(60, RollingDice.calculateAverageArrayOfArrays(weeklyMonthTemperatures), 0.0);
+        assertArrayEquals(expectedArray, RollingDice.calculateAverageArrayOfArrays(weeklyMonthTemperatures));
     }
 }
