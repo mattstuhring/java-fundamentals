@@ -53,3 +53,32 @@ This repo holds the first 10 labs for Code 401
 
 ### Resources
 - Travis Cox
+
+-----------------------------------------------------------------
+
+## Lab 3: Maps, File I/O, and Testing
+
+### File Structure
+```
+- basiclibrary
+-- src
+--- main
+---- java
+----- basiclibrary
+------ Lab03.java
+--- test
+---- java
+----- basiclibrary
+------ Lab03.java
+```
+
+### Methods
+- analyzeWeatherData
+- tally
+
+### Resources
+- Travis Cox
+- Brandon Hurrington
+- Melfi Perez
+- Nicholas Paro
+- Jack Kinne
