@@ -3,12 +3,58 @@
  */
 package linter;
 
+import java.io.*;
+import java.util.Scanner;
+
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        javascriptLinter();
+    }
+
+    // scanning came from https://docs.oracle.com/javase/tutorial/essential/io/scanning.html
+    public static void getAliceInWonderland() {
+        Scanner s = null;
+
+        int timesAliceIsMentioned = 0;
+
+        try {
+            s = new Scanner(new BufferedReader(new FileReader("./src/main/resources/gates.js")));
+            while (s.hasNext()) {
+                if (s.next().contains("Alice")) {
+                    timesAliceIsMentioned++;
+                }
+            }
+
+            System.out.println(String.format("Alice is mentioned %d times.", timesAliceIsMentioned));
+
+        } catch (FileNotFoundException e) {
+            System.out.println("the file was not found");
+        }
+    }
+
+
+
+
+
+
+
+    public static void javascriptLinter() {
+        Scanner s = null;
+
+        try {
+            s = new Scanner(new BufferedReader(new FileReader("./src/main/resources/gates.js")));
+
+
+            while (s.hasNextLine()) {
+                System.out.println(s.nextLine());
+            }
+
+            s.close();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
