@@ -70,15 +70,36 @@ This repo holds the first 10 labs for Code 401
 ---- java
 ----- basiclibrary
 ------ Lab03.java
+
+- linter
+-- src
+--- main
+---- java
+----- linter
+------ App.java
+--- test
+---- java
+----- linter
+------ AppTest.java
 ```
 
 ### Methods
 - analyzeWeatherData
 - tally
+- javascriptLinter
 
 ### Resources
+#### People
 - Travis Cox
 - Brandon Hurrington
 - Melfi Perez
 - Nicholas Paro
 - Jack Kinne
+
+#### Website
+- [Scanner](https://docs.oracle.com/javase/tutorial/essential/io/scanning.html)
+- [HashSet](https://www.geeksforgeeks.org/hashset-in-java/)
+- [Find max value of HashSet](http://www.java2s.com/Tutorial/Java/0140__Collections/FindmaximumelementofHashSet.html)
+- [Stringbuilder](https://www.javatpoint.com/StringBuilder-class)
+- [Stringbuilder new line](https://stackoverflow.com/questions/14534767/how-to-append-a-newline-to-stringbuilder)
+- [Collections Frequency](https://www.geeksforgeeks.org/java-util-collections-frequency-java-examples/)

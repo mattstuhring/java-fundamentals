@@ -14,41 +14,26 @@ public class App {
     }
 
     // scanning came from https://docs.oracle.com/javase/tutorial/essential/io/scanning.html
-    public static void getAliceInWonderland() {
+    public static String javascriptLinter() {
         Scanner s = null;
-
-        int timesAliceIsMentioned = 0;
+        StringBuilder sb = new StringBuilder();
+        int lineNumber = 0;
 
         try {
             s = new Scanner(new BufferedReader(new FileReader("./src/main/resources/gates.js")));
-            while (s.hasNext()) {
-                if (s.next().contains("Alice")) {
-                    timesAliceIsMentioned++;
-                }
-            }
-
-            System.out.println(String.format("Alice is mentioned %d times.", timesAliceIsMentioned));
-
-        } catch (FileNotFoundException e) {
-            System.out.println("the file was not found");
-        }
-    }
-
-
-
-
-
-
-
-    public static void javascriptLinter() {
-        Scanner s = null;
-
-        try {
-            s = new Scanner(new BufferedReader(new FileReader("./src/main/resources/gates.js")));
-
 
             while (s.hasNextLine()) {
-                System.out.println(s.nextLine());
+                String line = s.nextLine();
+
+                lineNumber++;
+
+                if (!line.isEmpty()) {
+                    char lastChar = line.charAt(line.length() - 1);
+
+                    if (lastChar != ';' && lastChar != '{' && lastChar != '}' && !line.contains("if") && !line.contains("else")) {
+                        sb.append("Line ").append(lineNumber).append(": Missing semicolon.").append(System.getProperty("line.separator"));
+                    }
+                }
             }
 
             s.close();
@@ -56,5 +41,7 @@ public class App {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
+        return sb.toString();
     }
 }
