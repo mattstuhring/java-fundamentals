@@ -1,13 +1,12 @@
 package inheritance;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
 
 public class Restaurant {
     public String name;
     public int stars; // 0 - 5
     public String price; // $-$$$
-    public List<Review> reviews = new ArrayList<>();
+    public LinkedList<Review> reviews = new LinkedList<>();
 
     public Restaurant(String name, int stars, String price) {
         this.name = name;
@@ -30,6 +29,9 @@ public class Restaurant {
     public void addReview(Review review) {
         // add new review to reviews list
         reviews.add(review);
+
+        // add restaurant to review
+        review.restaurant = this;
 
         // update restaurant stars
         int sum = 0;
