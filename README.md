@@ -3,8 +3,10 @@
 This repo holds the first 10 labs for Code 401
 
 ## Table of Contents
-1. Java primitives and control flow
-2. Arrays, Loops, Imports, ArrayLists
+1. Lab 01: Java primitives and control flow
+2. Lab 02: Arrays, Loops, Imports, ArrayLists
+3. Lab 03: Maps, File I/O, and Testing
+4. Lab 06: Composition and Inheritance, Part 1
 
 -----------------------------------------------------------------
 
@@ -29,7 +31,7 @@ This repo holds the first 10 labs for Code 401
 
 -----------------------------------------------------------------
 
-## Lab 2: Arrays, Loops, Imports, ArrayLists
+## Lab 02: Arrays, Loops, Imports, ArrayLists
 
 ### File Structure
 ```
@@ -56,7 +58,7 @@ This repo holds the first 10 labs for Code 401
 
 -----------------------------------------------------------------
 
-## Lab 3: Maps, File I/O, and Testing
+## Lab 03: Maps, File I/O, and Testing
 
 ### File Structure
 ```
@@ -103,3 +105,36 @@ This repo holds the first 10 labs for Code 401
 - [Stringbuilder](https://www.javatpoint.com/StringBuilder-class)
 - [Stringbuilder new line](https://stackoverflow.com/questions/14534767/how-to-append-a-newline-to-stringbuilder)
 - [Collections Frequency](https://www.geeksforgeeks.org/java-util-collections-frequency-java-examples/)
+
+-----------------------------------------------------------------
+
+## Lab 06: Composition and Inheritance, Part 1
+
+### File Structure
+```
+- inheritance
+-- src
+--- main
+---- java
+----- inheritance
+------ Restaurant.java
+------ Review.java
+--- test
+---- java
+----- inheritance
+------ RestaurantTest.java
+------ ReviewTest.java
+```
+
+### Methods
+- toString
+- addReview
+
+### Resources
+#### People
+- Travis Cox
+- Nicholas Paro
+- Jack Kinne
+
+#### Website
+- [Java ArrayList Tutorial with Examples](https://www.callicoder.com/java-arraylist/)
