@@ -7,6 +7,7 @@ This repo holds the first 10 labs for Code 401
 2. Lab 02: Arrays, Loops, Imports, ArrayLists
 3. Lab 03: Maps, File I/O, and Testing
 4. Lab 06: Composition and Inheritance, Part 1
+5. Lab 7: Composition and Inheritance, Part 2
 
 -----------------------------------------------------------------
 
@@ -138,3 +139,38 @@ This repo holds the first 10 labs for Code 401
 
 #### Website
 - [Java ArrayList Tutorial with Examples](https://www.callicoder.com/java-arraylist/)
+
+-----------------------------------------------------------------
+
+## Lab 7: Composition and Inheritance, Part 2
+
+### File Structure
+```
+- inheritance
+-- src
+--- main
+---- java
+----- inheritance
+------ Restaurant.java
+------ Review.java
+------ Shop.java
+------ Theater.java
+--- test
+---- java
+----- inheritance
+------ RestaurantTest.java
+------ ReviewTest.java
+------ ShopTest.java
+------ TheaterTest.java
+```
+
+### Methods
+- addMovie
+- removeMovie
+- addReview
+
+### Resources
+- Travis Cox
+- Nicholas Paro
+- Jack Kinne
+- Melfi Perez

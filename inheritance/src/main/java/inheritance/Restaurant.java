@@ -30,9 +30,6 @@ public class Restaurant {
         // add new review to reviews list
         reviews.add(review);
 
-        // add restaurant to review
-        review.restaurant = this;
-
         // update restaurant stars
         int sum = 0;
         for (Review rev : reviews) {
